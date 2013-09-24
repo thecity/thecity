@@ -1,0 +1,9 @@
+--no-private
+--protected
+--tag req_scope:"Required Scopes"
+--tag opt_scope:"Optional Scopes"
+--markup markdown
+-
+CHANGELOG.md
+LICENSE.md
+README.md
