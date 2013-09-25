@@ -41,7 +41,6 @@ def stub_delete(path)
 end
 
 def stub_get(path)
-  puts TheCity::API::Client::ENDPOINT + path
   stub_request(:get, TheCity::API::Client::ENDPOINT + path)
 end
 

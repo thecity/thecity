@@ -35,7 +35,7 @@ module TheCity
 
       attr_writer :connection_options, :middleware
 
-      ENDPOINT = ENV['THECITY_API_ENDPOINT'] || 'https://api.stagethecity.org'
+      ENDPOINT = ENV['THECITY_API_ENDPOINT'] || 'https://api.onthecity.org'
 
       def connection_options
         {
