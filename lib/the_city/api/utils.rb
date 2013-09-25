@@ -14,6 +14,7 @@ module TheCity
       # @param klass [Class]
       # @param request_method [Symbol]
       # @param path [String]
+      # @param request_options [Hash]
       # @param options [Hash]
       # @return [Array]
       def objects_from_response(klass, request_method, path, request_options={}, options ={})
@@ -33,6 +34,7 @@ module TheCity
       # @param klass [Class]
       # @param request_method [Symbol]
       # @param path [String]
+      # @param request_options [Hash]
       # @param options [Hash]
       # @return [Object]
       def object_from_response(klass, request_method, path, request_options={}, options ={})
@@ -44,7 +46,7 @@ module TheCity
       # @param klass [Class]
       # @param request_method [Symbol]
       # @param path [String]
-      # @param options [Hash]
+      # @param request_options [Hash]
       # @return [TheCity::Collection]
       def collection_from_response(collection_name, klass, request_method, path, request_options)
         response = send(request_method.to_sym, path, request_options)

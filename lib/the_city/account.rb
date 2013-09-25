@@ -24,5 +24,9 @@ module TheCity
       @campuses
     end
 
+    def label_for(thecity_primitive)
+      terminology.send(thecity_primitive.downcase.to_sym)
+    end
+
   end
 end

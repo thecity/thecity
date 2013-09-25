@@ -16,7 +16,6 @@ module TheCity
         send(:"#{key}=", value)
       end
       yield self if block_given?
-      validate_credential_type!
     end
 
     # @return [String]
@@ -82,20 +81,12 @@ module TheCity
       credentials.values.all?
     end
 
-    def memoize(key, &block)
-      ivar = :"@#{key}"
-      return instance_variable_get(ivar) if instance_variable_defined?(ivar)
-      result = block.call
-      instance_variable_set(ivar, result)
-    end
-
   private
 
     # Ensures that all credentials set during configuration are of a
     # valid type. Valid types are String and Symbol.
-    def validate_credential_type!
+    def validate_credentials!
       for credential, value in credentials
-        next if value.nil?
         raise(Error::ConfigurationError, "Invalid #{credential} specified: #{value.inspect} must be a string or symbol.") unless value.is_a?(String) || value.is_a?(Symbol)
       end
     end

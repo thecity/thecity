@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'http', '~> 0.5.0'
   spec.add_dependency 'http_parser.rb', '~> 0.5.3'
   spec.add_dependency 'json', '~> 1.8'
-  spec.add_dependency 'simple_oauth', '~> 0.2.0'
+  #spec.add_dependency 'simple_oauth', '~> 0.2.0'
   #spec.add_dependency 'tzinfo', '~> 1.0.1'
   #spec.add_dependency 'tzinfo-data', "~> 1.2013.4"
   spec.add_development_dependency 'bundler', '~> 1.0'

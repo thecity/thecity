@@ -35,7 +35,7 @@ module TheCity
 
       attr_writer :bearer_token, :connection_options, :middleware
 
-      ENDPOINT = ENV['THECITY_API_ENDPOINT'] || 'https://api.stagethecity.org'
+      ENDPOINT = ENV['THECITY_API_ENDPOINT'] || 'https://api.onthecity.org'
 
       # @return [String]
       def bearer_token
@@ -109,11 +109,6 @@ module TheCity
         !!bearer_token
       end
 
-      # @return [Boolean]
-      def credentials?
-        super || bearer_token?
-      end
-
     private
 
       # Returns a proc that can be used to setup the Faraday::Request headers
@@ -145,6 +140,7 @@ module TheCity
       end
 
       def request(method, path, params={}, signature_params=params)
+        validate_credentials!
         request_setup = request_setup(method, path, params, signature_params)
         connection.send(method.to_sym, path, params, &request_setup).env
       rescue Faraday::Error::ClientError, JSON::ParserError
