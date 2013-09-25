@@ -37,22 +37,13 @@ module TheCity
 
       ENDPOINT = ENV['THECITY_API_ENDPOINT'] || 'https://api.onthecity.org'
 
-      # @return [String]
-      def bearer_token
-        if instance_variable_defined?(:@bearer_token)
-          @bearer_token
-        else
-          ENV['BEARER_TOKEN']
-        end
-      end
-
       def connection_options
         {
           :builder => middleware,
           :headers => {
             :accept => "application/vnd.thecity.v#{version}+json",
-            'X-CITY-SUBDOMAIN' => subdomain,
-            'X-CITY-ACCESS-TOKEN' => access_token,
+            'X-THECITY-SUBDOMAIN' => subdomain,
+            'X-THECITY-ACCESS-TOKEN' => access_token,
           },
           :request => {
             :open_timeout => 5,
@@ -103,11 +94,6 @@ module TheCity
         request(:put, path, params)
       end
 
-      # @return [Boolean]
-      def bearer_token?
-        return true
-        !!bearer_token
-      end
 
     private
 
@@ -118,24 +104,8 @@ module TheCity
       # @param params [Hash]
       # @return [Proc]
       def request_setup(method, path, params, signature_params)
-        puts ""
-        puts "***************************"
-        puts "***************************"
-        puts "    params: #{params.inspect}"
         Proc.new do |request|
-          if params.delete(:bearer_token_request)
-            puts "bearer"
-            request.headers[:authorization] = bearer_token_credentials_auth_header
-            request.headers[:content_type] = 'application/x-www-form-urlencoded; charset=UTF-8'
-           # request.headers[:accept] = '*/*' # It is important we set this, otherwise we get an error.
-          elsif params.delete(:app_auth) #|| !user_token?
-            puts "app_auth"
-            @bearer_token = token unless bearer_token?
-            request.headers[:authorization] = bearer_auth_header
-          else
-            puts "else"
-            request.headers[:authorization] = oauth_auth_header(method, ENDPOINT + path, signature_params).to_s
-          end
+          request.headers[:authorization] = bearer_auth_header
         end
       end
 
@@ -154,24 +124,11 @@ module TheCity
         @connection ||= Faraday.new(ENDPOINT, connection_options)
       end
 
-      # Generates authentication header for token request
+      # Generates authentication header for api request
       #
       # @return [String]
-      def bearer_token_credentials_auth_header
-        basic_auth_token = strict_encode64("#{@app_id}:#{@app_secret}")
-        "Basic #{basic_auth_token}"
-      end
-
       def bearer_auth_header
-        #"Bearer #{bearer_token.access_token}"
         "Bearer #{access_token}"
-      end
-
-    private
-
-      # Base64.strict_encode64 is not available on Ruby 1.8.7
-      def strict_encode64(str)
-        Base64.encode64(str).gsub("\n", "")
       end
 
     end

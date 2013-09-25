@@ -1,4 +1,3 @@
-require 'simple_oauth'
 require 'the_city/version'
 require 'uri'
 
@@ -89,11 +88,6 @@ module TheCity
       for credential, value in credentials
         raise(Error::ConfigurationError, "Invalid #{credential} specified: #{value.inspect} must be a string or symbol.") unless value.is_a?(String) || value.is_a?(Symbol)
       end
-    end
-
-    def oauth_auth_header(method, uri, params={})
-      uri = URI.parse(uri)
-      SimpleOAuth::Header.new(method, uri, params, credentials)
     end
 
   end
