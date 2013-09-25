@@ -80,9 +80,9 @@ client.my_groups
 For more usage examples, please see the full [documentation][].
 
 ## Documentation
-[http://rdoc.info/gems/thecity][documentation]
+[http://rdoc.info/github/thecity/thecity][documentation]
 
-[documentation]: http://rdoc.info/gems/thecity
+[documentation]: http://rdoc.info/github/thecity/thecity
 
 ## Announcements
 You should [follow @thecity][follow] [and @thecity_status][follow_status] on Twitter for announcements and updates about
