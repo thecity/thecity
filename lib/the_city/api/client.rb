@@ -33,7 +33,7 @@ module TheCity
       include TheCity::API::Prayers
       include TheCity::API::Needs
 
-      attr_writer :bearer_token, :connection_options, :middleware
+      attr_writer :connection_options, :middleware
 
       ENDPOINT = ENV['THECITY_API_ENDPOINT'] || 'https://api.stagethecity.org'
 
@@ -112,7 +112,7 @@ module TheCity
       def request(method, path, params={}, signature_params=params)
         validate_credentials!
         request_setup = request_setup(method, path, params, signature_params)
-        connection.send(method.to_sym, ENDPOINT + path, params, &request_setup).env
+        connection.send(method.to_sym, path, params, &request_setup).env
       rescue Faraday::Error::ClientError, JSON::ParserError
         raise TheCity::Error
       end
