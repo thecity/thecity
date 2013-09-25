@@ -3,6 +3,7 @@
 [![Gem Version](https://badge.fury.io/rb/thecity.png)](http://badge.fury.io/rb/thecity)
 [![Dependency Status](https://gemnasium.com/thecity/thecity.png)](https://gemnasium.com/thecity/thecity)
 [![Build Status](https://travis-ci.org/thecity/thecity.png?branch=master)](https://travis-ci.org/thecity/thecity)
+[![Coverage Status](https://coveralls.io/repos/thecity/thecity/badge.png?branch=master)](https://coveralls.io/r/thecity/thecity?branch=master)
 
 A Ruby interface to the The City API. For more information about The City platform, see [http://api.onthecity.org][api info]
 
