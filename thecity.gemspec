@@ -17,7 +17,7 @@ Gem::Specification.new do |spec|
   spec.files = %w(CHANGELOG.md LICENSE.md README.md Rakefile thecity.gemspec)
   spec.files += Dir.glob("lib/**/*.rb")
   spec.files += Dir.glob("spec/**/*")
-  spec.homepage = 'http://github.com/robertleib/thecity-ruby/'
+  spec.homepage = 'http://github.com/thecity/thecity-ruby/'
   spec.licenses = ['MIT']
   spec.name = 'thecity'
   spec.require_paths = ['lib']
