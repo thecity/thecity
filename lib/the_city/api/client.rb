@@ -35,15 +35,15 @@ module TheCity
 
       attr_writer :bearer_token, :connection_options, :middleware
 
-      ENDPOINT = ENV['THECITY_API_ENDPOINT'] || 'https://api.onthecity.org'
+      ENDPOINT = ENV['THECITY_API_ENDPOINT'] || 'https://api.stagethecity.org'
 
       def connection_options
         {
           :builder => middleware,
           :headers => {
             :accept => "application/vnd.thecity.v#{version}+json",
-            'X-THECITY-SUBDOMAIN' => subdomain,
-            'X-THECITY-ACCESS-TOKEN' => access_token,
+            'X-CITY-SUBDOMAIN' => subdomain,
+            'X-CITY-ACCESS-TOKEN' => access_token,
           },
           :request => {
             :open_timeout => 5,
@@ -112,7 +112,7 @@ module TheCity
       def request(method, path, params={}, signature_params=params)
         validate_credentials!
         request_setup = request_setup(method, path, params, signature_params)
-        connection.send(method.to_sym, path, params, &request_setup).env
+        connection.send(method.to_sym, ENDPOINT + path, params, &request_setup).env
       rescue Faraday::Error::ClientError, JSON::ParserError
         raise TheCity::Error
       end

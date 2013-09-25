@@ -2,6 +2,7 @@
 
 [![Gem Version](https://badge.fury.io/rb/thecity.png)](http://badge.fury.io/rb/thecity)
 [![Dependency Status](https://gemnasium.com/thecity/thecity.png)](https://gemnasium.com/thecity/thecity)
+[![Build Status](https://travis-ci.org/thecity/thecity.png?branch=master)](https://travis-ci.org/thecity/thecity)
 
 A Ruby interface to the The City API. For more information about The City platform, see [http://api.onthecity.org][api info]
 
@@ -46,21 +47,11 @@ Alternately, you can set the following environment variables:
     THECITY_ACCESS_TOKEN
     THECITY_SUBDOMAIN
 
-After configuration, requests can be made like so:
-
-```ruby
-client.current_user
-```
-
-or
-
-```ruby
-client.my_groups
-```
-
 ## Usage Examples
 All examples require an authenticated TheCity client with a valid access_token. See the section on <a
 href="#configuration">configuration</a>.
+
+After configuration, requests can be made like so:
 
 **Get the authenticated user (current user)**
 
