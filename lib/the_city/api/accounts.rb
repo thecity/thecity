@@ -13,7 +13,8 @@ module TheCity
       # @return [TheCity::Account]
       # @param options [Hash] A customizable set of options.
       def church_account(options={})
-        object_from_response(TheCity::Account, :get, "/church_account", options)
+        @church_account = nil if options.delete(:force_download)
+        @church_account ||= object_from_response(TheCity::Account, :get, "/church_account", options)
       end
       alias current_account church_account
       alias current_church church_account
@@ -24,7 +25,8 @@ module TheCity
       # @return [Array<TheCity::Account>] 
       # @param options [Hash] A customizable set of options.
       def my_accounts(options={})
-        objects_from_response(TheCity::Account, :get, "/me/accounts", options)
+        @my_accounts = nil if options.delete(:force_download)
+        @my_accounts ||= objects_from_response(TheCity::Account, :get, "/me/accounts", options)
       end
 
     end

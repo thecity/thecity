@@ -10,9 +10,11 @@ module TheCity
       #
       # @req_scope group_contont or user_groups
       # @param options [Hash] A customizable set of options.
+      # @option options [Boolean] :force_download Forces the request to hit the server and flush the cached response
       # @return [Array<TheCity::Group>]
       def my_groups(options={})
-        objects_from_response(TheCity::Group, :get, "/me/groups", options)
+        @my_groups = nil if options.delete(:force_download)
+        @my_groups ||= objects_from_response(TheCity::Group, :get, "/me/groups", options)
       end
 
       # Returns a group by id

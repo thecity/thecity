@@ -14,9 +14,9 @@ require 'the_city/api/users'
 require 'the_city/api/accounts'
 require 'the_city/api/groups'
 require 'the_city/api/topics'
-# require 'the_city/api/events'
-# require 'the_city/api/prayers'
-# require 'the_city/api/needs'
+require 'the_city/api/events'
+require 'the_city/api/prayers'
+require 'the_city/api/needs'
 
 module TheCity
   module API
@@ -29,9 +29,9 @@ module TheCity
       include TheCity::API::Accounts
       include TheCity::API::Groups
       include TheCity::API::Topics
-      # include TheCity::API::Events
-      # include TheCity::API::Prayers
-      # include TheCity::API::Needs
+      include TheCity::API::Events
+      include TheCity::API::Prayers
+      include TheCity::API::Needs
 
       attr_writer :bearer_token, :connection_options, :middleware
 

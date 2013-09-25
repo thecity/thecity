@@ -21,7 +21,7 @@ module TheCity
         arguments = TheCity::Arguments.new(args)
         uid = args.shift
         @users[uid] = nil if arguments.options.delete(:force_download)
-        @users[uid] ||= TheCity::User.from_response_with_options(send(:get, "/users/#{uid}", arguments.options), {:client => self})
+        @users[uid] ||= object_from_response(TheCity::User, :get, "/users/#{uid}", arguments.options, {:client => self})
       end
 
       # Returns the user associated with the current access token
@@ -35,7 +35,7 @@ module TheCity
       # @option options [Boolean] :force_download Forces the request to hit the server and flush the cached response
       def me(options={})
         @me = nil if options.delete(:force_download)
-        @me ||= TheCity::User.from_response_with_options(send(:get, "/me", options), {:current_user => true, :client => self})
+        @me ||= object_from_response(TheCity::User, :get, "/me", options, {:current_user => true, :client => self})
       end
       alias current_user me
 
@@ -51,7 +51,6 @@ module TheCity
       def permissions(*args)
         arguments = TheCity::Arguments.new(args)
         object_from_response(TheCity::Permissions, :get, "/me/permissions", arguments.options)
-        #get("/me/permissions")[:body]
       end
 
       # Returns true if the specified user exists

@@ -1,5 +1,6 @@
-#require 'the_city/arguments'
+require 'the_city/arguments'
 require 'the_city/api/utils'
+require 'the_city/topic'
 
 module TheCity
   module API
@@ -17,8 +18,11 @@ module TheCity
       # @option options [String] :title The title of the topic.
       # @option options [String] :body The body text of the topic.
       def post_topic(options)
-      	gid = options[:group_id] || 0
-        post("/groups/#{gid}/topics/", options)[:body]
+        raise(Error::ArgumentError, "Must supply a options[:group_id] for the topic's originating group") unless options[:group_id]
+        raise(Error::ArgumentError, "Title (options[:title]) required") unless options[:title]
+        raise(Error::ArgumentError, "Body (options[:body]) required") unless options[:body]
+        gid = options[:group_id] || 0
+        object_from_response(TheCity::Topic, :post, "/groups/#{gid}/topics/", options, {:client => self})
       end
 
       # Returns a topic by id
@@ -39,7 +43,7 @@ module TheCity
         arguments = TheCity::Arguments.new(args)
         tid = args.shift
         @topics[tid] = nil if arguments.options.delete(:force_download)
-        @topics[tid] ||= TheCity::Topic.from_response_with_options(send(:get, "/topics/#{tid}", arguments.options), {:client => self})
+        @topics[tid] ||= object_from_response(TheCity::Topic, :get, "/topics/#{tid}", arguments.options, {:client => self})
       end
 
     end

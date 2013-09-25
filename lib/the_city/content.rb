@@ -20,9 +20,9 @@ module TheCity
     object_attr_reader :User, :user
     object_attr_reader :Group, :group
 
-    def user
-      @user
-    end
+    # def user
+    #   @user
+    # end
     alias author user
     
   end
