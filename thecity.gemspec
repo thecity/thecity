@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   #spec.add_dependency 'tzinfo', '~> 1.0.1'
   #spec.add_dependency 'tzinfo-data', "~> 1.2013.4"
   spec.add_development_dependency 'bundler', '~> 1.0'
-  spec.authors = ["robertleib"]
+  spec.authors = ["Robert Leib"]
   spec.description = %q{A Ruby interface to The City API.}
   spec.email = ["robert.leib@gmail.com"]
   spec.files = %w(CHANGELOG.md LICENSE.md README.md Rakefile thecity.gemspec)
