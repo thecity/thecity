@@ -1,5 +1,7 @@
 # The City Ruby Gem
 
+[![Gem Version](https://badge.fury.io/rb/thecity.png)](http://badge.fury.io/rb/thecity)
+
 A Ruby interface to the The City API. For more information about The City platform, see [http://api.onthecity.org][api info]
 
 [api info]: http://api.onthecity.org
@@ -74,20 +76,7 @@ client.post_topic(:group_id => 1234567, :title => 'Mr. Watson, come here', :body
 ```ruby
 client.my_groups
 ```
-**Retrieve the list of permissions associated with the current user**
 
-```ruby
-client.followers("gem")
-client.followers(213747670)
-client.followers
-```
-**Fetch a cursored list of friends with profile details (by screen name or user ID, or by implict authenticated user)**
-
-```ruby
-client.friends("gem")
-client.friends(213747670)
-client.friends
-```
 For more usage examples, please see the full [documentation][].
 
 ## Documentation
