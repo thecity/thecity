@@ -4,7 +4,7 @@ require 'the_city/need'
 
 module TheCity
   module API
-    module needs
+    module Needs
       include TheCity::API::Utils
   
       # Posts a need to The City

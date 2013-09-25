@@ -1,6 +1,7 @@
 # The City Ruby Gem
 
 [![Gem Version](https://badge.fury.io/rb/thecity.png)](http://badge.fury.io/rb/thecity)
+[![Dependency Status](https://gemnasium.com/thecity/thecity.png)](https://gemnasium.com/thecity/thecity)
 
 A Ruby interface to the The City API. For more information about The City platform, see [http://api.onthecity.org][api info]
 

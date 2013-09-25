@@ -4,7 +4,7 @@ require 'the_city/prayer'
 
 module TheCity
   module API
-    module prayers
+    module Prayers
       include TheCity::API::Utils
   
       # Posts a prayer to The City
