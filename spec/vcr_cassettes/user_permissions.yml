@@ -1,0 +1,114 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.onthecity.org/me
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.thecity.v1+json
+      X-Thecity-Subdomain:
+      - jasonh
+      X-Thecity-Access-Token:
+      - 32d04b5fcd5957bcd1294b58c4c1a455640acfb177936da43b883e7346bacc64
+      User-Agent:
+      - Faraday v0.8.8
+      Authorization:
+      - Bearer 32d04b5fcd5957bcd1294b58c4c1a455640acfb177936da43b883e7346bacc64
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 26 Sep 2013 20:02:47 GMT
+      Status:
+      - 200 OK
+      X-City-Ratelimit-Limit-By-Account:
+      - '10000'
+      X-City-Ratelimit-Remaining-By-Account:
+      - '9999'
+      X-Frame-Options:
+      - sameorigin
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '3537'
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"groups":[{"role_title":"Leader","name":"Hot Pockets Church","id":78430},{"role_title":"Leader","name":"Hot
+        Pockets Kids","id":80858},{"role_title":"Participant","name":"Little Ones","id":80859},{"role_title":"Leader","name":"Middle
+        Ones","id":80860},{"role_title":"Leader","name":"Big Ones","id":80861},{"role_title":"Leader","name":"Test
+        Campus","id":82434},{"role_title":"Leader","name":"Hot Pockets Connect","id":83000},{"role_title":"Leader","name":"Bacon
+        Campus","id":87131},{"role_title":"Leader","name":"Bacon Kids","id":87132},{"role_title":"Leader","name":"Bacon
+        Little Ones","id":87133},{"role_title":"Leader","name":"Bacon Middle Ones","id":87134},{"role_title":"Leader","name":"Bacon
+        Big Ones","id":87135},{"role_title":"Manager","name":"Hot Pocket Seed","id":88339},{"role_title":"Leader","name":"Bacon
+        Connect","id":89733},{"role_title":"Leader","name":"Jason''s Radness","id":105409},{"role_title":"Leader","name":"Bacon
+        Huddle","id":105739},{"role_title":"Leader","name":"Bacon CG","id":105740}],"last":"Hagglund","email_bouncing":false,"has_children":true,"secondary_phone":"","nickname":"","email":"jasonh@onthecity.org","about_me":"","member_since":"10/31/2012","primary_campus_id":null,"secondary_phone_type":"Home","last_engaged":"09/26/2013
+        08:02 PM (UTC)","external_chms_id":null,"birthdate":"05/18/1980","primary_campus_name":null,"middle":"J.","active":true,"gender":"Male","marital_status":"SINGLE","first":"Jason","url":"https://api.onthecity.org/users/809521","addresses":[{"street2":null,"privacy":"Private","longitude":-122.144965,"zipcode":"98052","sentence":"8104
+        146th Ct. NE, Redmond, WA, 98052","location_type":"Mailing","city":"Redmond","name":null,"state":"WA","latitude":47.676096,"id":898035,"street":"8104
+        146th Ct. NE"},{"street2":"","privacy":"Private","longitude":null,"zipcode":"98104","sentence":"710
+        2nd Ave, Seattle, WA - WASHINGTON, 98104","location_type":"Home","city":"Seattle","name":null,"state":"WA
+        - WASHINGTON","latitude":null,"id":1114994,"street":"710 2nd Ave"}],"primary_phone":"2063848472","id":809521,"has_spouse":false,"family":{"family_members":[{"last":"Hagglund","type":"OfflineUser","nickname":null,"external_chms_id":null,"birthdate":"2011-07-27","gender":"Female","first":"Juliet","name":"Juliet
+        Hagglund","member_type":"Child","family_role":"Daughter","id":919381,"profile_picture":"https://jasonh.onthecity.org/images/50x50_thumb_female.jpg"},{"last":"Hagglund","type":"OfflineUser","nickname":null,"external_chms_id":null,"birthdate":"2002-03-11","gender":"Male","first":"Bigger","name":"Bigger
+        Hagglund","member_type":"Child","family_role":"Son","id":844762,"profile_picture":"https://jasonh.onthecity.org/images/50x50_thumb.jpg"},{"last":"Hagglund","type":"OfflineUser","nickname":null,"external_chms_id":null,"birthdate":"2006-03-11","gender":"Female","first":"Middle","name":"Middle
+        Hagglund","member_type":"Child","family_role":"Daughter","id":844761,"profile_picture":"https://jasonh.onthecity.org/images/50x50_thumb_female.jpg"},{"last":"Hagglund","type":"OfflineUser","nickname":null,"external_chms_id":null,"birthdate":"2011-03-11","gender":"Male","first":"Roger","name":"Roger
+        Hagglund","member_type":"Child","family_role":"Son","id":844760,"profile_picture":"https://jasonh.onthecity.org/images/50x50_thumb.jpg"}],"id":158558},"primary_phone_type":"Mobile","title":null,"staff":true,"profile_picture":"https://dcascn3rg03ga.cloudfront.net/accounts/1389/image_attachments/746882/IMG_5037-sha1-c86e444840a999d117603f4ee979e9394fa29bc1_thumb.JPG?1347918737"}'
+    http_version: 
+  recorded_at: Thu, 26 Sep 2013 20:02:47 GMT
+- request:
+    method: get
+    uri: https://api.onthecity.org/me/permissions
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.thecity.v1+json
+      X-Thecity-Subdomain:
+      - jasonh
+      X-Thecity-Access-Token:
+      - 32d04b5fcd5957bcd1294b58c4c1a455640acfb177936da43b883e7346bacc64
+      User-Agent:
+      - Faraday v0.8.8
+      Authorization:
+      - Bearer 32d04b5fcd5957bcd1294b58c4c1a455640acfb177936da43b883e7346bacc64
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 26 Sep 2013 20:02:48 GMT
+      Status:
+      - 200 OK
+      X-City-Ratelimit-Limit-By-Account:
+      - '10000'
+      X-City-Ratelimit-Remaining-By-Account:
+      - '9998'
+      X-Frame-Options:
+      - sameorigin
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '674'
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"can_list_in_plaza":true,"can_create_in_group_ids":{"topics":[87135,105740,87131,89733,105739,87132,87133,87134,80861,88339,78430,83000,80858,105409,80859,80860,82434],"events":[87135,105740,87131,89733,105739,87132,87133,87134,80861,88339,78430,83000,80858,105409,80859,80860,82434],"albums":[87135,105740,87131,89733,105739,87132,87133,87134,80861,88339,78430,83000,80858,105409,80859,80860,82434],"needs":[87135,105740,87131,89733,105739,87132,87133,87134,80861,88339,78430,83000,80858,105409,80859,80860,82434],"prayers":[87135,105740,87131,89733,105739,87132,87133,87134,80861,88339,78430,83000,80858,105409,80859,80860,82434]},"member":true,"admin":true,"staff":true}'
+    http_version: 
+  recorded_at: Thu, 26 Sep 2013 20:02:48 GMT
+recorded_with: VCR 2.6.0
