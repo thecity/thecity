@@ -10,3 +10,4 @@ Gemfile.lock
 log/*
 pkg/*
 .DS_Store
+.idea
