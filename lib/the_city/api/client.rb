@@ -35,15 +35,15 @@ module TheCity
 
       attr_writer :connection_options, :middleware
 
-      ENDPOINT = ENV['THECITY_API_ENDPOINT'] || 'https://api.stagethecity.org'
+      ENDPOINT = ENV['THECITY_API_ENDPOINT'] || 'https://api.onthecity.org'
 
       def connection_options
         {
           :builder => middleware,
           :headers => {
             :accept => "application/vnd.thecity.v#{version}+json",
-            'X-CITY-SUBDOMAIN' => subdomain,
-            'X-CITY-ACCESS-TOKEN' => access_token,
+            'X-THECITY-SUBDOMAIN' => subdomain,
+            'X-THECITY-ACCESS-TOKEN' => access_token,
           },
           :request => {
             :open_timeout => 5,
