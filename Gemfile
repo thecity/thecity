@@ -14,6 +14,7 @@ group :test do
   gem 'rspec', '>= 2.14'
   gem 'simplecov', :require => false
   gem 'webmock'
+  gem 'vcr'
 end
 
 gemspec
