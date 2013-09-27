@@ -12,7 +12,7 @@ require 'the_city'
 require 'rspec'
 require 'webmock/rspec'
 require 'vcr'
-require 'mechanize'
+require 'typhoeus'
 require 'active_support/core_ext'
 
 VCR.configure do |c|
@@ -32,12 +32,9 @@ APP_ID = "aee1e51abe07366e3a11d4dfc0f95e17d58a1e3c45a8d3016c8a427459ba2a3b"
 SECRET = "7cc1c16604a021b43ce5b49a2c2fb808c23b33d998e76ca866475a5a8ca44a04"
 
 def get_oauth_token_for(username, password, subdomain='jasonh')
-  agent = Mechanize.new
-  auth_response = agent.post("https://authentication.onthecity.org/sessions/login_user_with_oauth",
-                             "app_id" => APP_ID,
-                             "secret" => SECRET,
-                             "login" => username, "password" => password, "subdomain" => subdomain)
-  return JSON.parse(auth_response.body)['access_token']['token']
+  auth_response = Typhoeus.post("https://authentication.onthecity.org/sessions/login_user_with_oauth",
+                :params => {"app_id" => APP_ID, "secret" => SECRET, "login" => username, "password" => password, "subdomain" => subdomain})
+  return JSON.parse(auth_response.options[:response_body])['access_token']['token']
 end
 
 def fire_up_test_client(subdomain='jasonh')

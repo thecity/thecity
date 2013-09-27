@@ -13,9 +13,9 @@ group :test do
   gem 'coveralls', :require => false
   gem 'i18n'
   gem 'json', :platforms => :ruby_18
-  gem 'mechanize'
   gem 'rspec', '>= 2.14'
   gem 'simplecov', :require => false
+  gem 'typhoeus'
   gem 'vcr'
   gem 'webmock'
 end
