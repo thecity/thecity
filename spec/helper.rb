@@ -18,7 +18,7 @@ require 'active_support/core_ext'
 VCR.configure do |c|
   c.cassette_library_dir = "spec/vcr_cassettes"
   c.hook_into :webmock
-  c.default_cassette_options = {re_record_interval: 7.days}
+  c.default_cassette_options = {:re_record_interval => 7.days}
   c.configure_rspec_metadata!
 end
 
@@ -34,7 +34,13 @@ SECRET = "7cc1c16604a021b43ce5b49a2c2fb808c23b33d998e76ca866475a5a8ca44a04"
 def get_oauth_token_for(username, password, subdomain='jasonh')
   auth_response = Typhoeus.post("https://authentication.onthecity.org/sessions/login_user_with_oauth",
                 :params => {"app_id" => APP_ID, "secret" => SECRET, "login" => username, "password" => password, "subdomain" => subdomain})
-  return JSON.parse(auth_response.options[:response_body])['access_token']['token']
+  typhoeus_token = JSON.parse(auth_response.options[:response_body])['access_token']['token'] rescue nil
+  vcr_token = JSON.parse(auth_response.options[:body])['access_token']['token'] rescue nil
+  if typhoeus_token.nil?
+    return vcr_token
+  else
+    return typhoeus_token
+  end
 end
 
 def fire_up_test_client(subdomain='jasonh')

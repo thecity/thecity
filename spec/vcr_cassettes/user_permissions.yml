@@ -19,11 +19,11 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 27 Sep 2013 06:45:31 GMT
+      - Fri, 27 Sep 2013 07:07:25 GMT
       Etag:
       - ! '"e0ae1dd9447e8955623133fa2a15128a"'
       Set-Cookie:
-      - _thecity_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTViNjQ1YzRkMmYyOWQ5ZTQ0OTBiMWM4MGIxMGMyZmE0BjsAVEkiEGdsb2JhbF91c2VyBjsARmkCYQI%3D--5beb16f92b425e3d77337644052143de731c8c32;
+      - _thecity_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJThhMjFiZmRiMjJjY2EyMjM4MWY3MDdhYTM1ZTlkNWRjBjsAVEkiEGdsb2JhbF91c2VyBjsARmkCYQI%3D--26ebd09831a627494caecd9a52488e3ed4937893;
         domain=.onthecity.org; path=/; secure; HttpOnly
       Status:
       - 200 OK
@@ -32,9 +32,9 @@ http_interactions:
       X-Rack-Cache:
       - invalidate, pass
       X-Request-Id:
-      - dcd0cb6309980da34ec6354d6b4f8a50
+      - d63b9feeb4e04eaf6f31a3237eca60d3
       X-Runtime:
-      - '0.097455'
+      - '0.079810'
       X-Ua-Compatible:
       - IE=Edge,chrome=1
       Transfer-Encoding:
@@ -45,7 +45,7 @@ http_interactions:
       encoding: US-ASCII
       string: ! '{"global_user":{"id":609,"first":"Jason","last":"Hagglund","email":"jasonh@onthecity.org"},"user":{"id":809521,"first":"Jason","last":"Hagglund","email":"jasonh@onthecity.org","account_id":1389},"access_token":{"token":"32d04b5fcd5957bcd1294b58c4c1a455640acfb177936da43b883e7346bacc64","expired_time":null}}'
     http_version: 
-  recorded_at: Fri, 27 Sep 2013 06:45:32 GMT
+  recorded_at: Fri, 27 Sep 2013 07:07:25 GMT
 - request:
     method: get
     uri: https://api.onthecity.org/me
@@ -73,7 +73,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 27 Sep 2013 06:46:14 GMT
+      - Fri, 27 Sep 2013 07:07:26 GMT
       Status:
       - 200 OK
       X-City-Ratelimit-Limit-By-Account:
@@ -98,8 +98,8 @@ http_interactions:
         Little Ones","id":87133},{"role_title":"Leader","name":"Bacon Middle Ones","id":87134},{"role_title":"Leader","name":"Bacon
         Big Ones","id":87135},{"role_title":"Manager","name":"Hot Pocket Seed","id":88339},{"role_title":"Leader","name":"Bacon
         Connect","id":89733},{"role_title":"Leader","name":"Jason''s Radness","id":105409},{"role_title":"Leader","name":"Bacon
-        Huddle","id":105739},{"role_title":"Leader","name":"Bacon CG","id":105740}],"last":"Hagglund","has_children":true,"secondary_phone":"","nickname":"","email":"jasonh@onthecity.org","about_me":"","member_since":"10/31/2012","email_bouncing":false,"secondary_phone_type":"Home","last_engaged":"09/27/2013
-        06:46 AM (UTC)","external_chms_id":null,"birthdate":"05/18/1980","primary_campus_id":null,"middle":"J.","active":true,"gender":"Male","primary_campus_name":null,"marital_status":"SINGLE","first":"Jason","url":"https://api.onthecity.org/users/809521","addresses":[{"street2":null,"privacy":"Private","longitude":-122.144965,"zipcode":"98052","sentence":"8104
+        Huddle","id":105739},{"role_title":"Leader","name":"Bacon CG","id":105740}],"last":"Hagglund","email_bouncing":false,"has_children":true,"secondary_phone":"","nickname":"","email":"jasonh@onthecity.org","about_me":"","member_since":"10/31/2012","has_spouse":false,"secondary_phone_type":"Home","last_engaged":"09/27/2013
+        07:07 AM (UTC)","external_chms_id":null,"birthdate":"05/18/1980","primary_campus_id":null,"middle":"J.","active":true,"gender":"Male","primary_campus_name":null,"marital_status":"SINGLE","first":"Jason","url":"https://api.onthecity.org/users/809521","addresses":[{"street2":null,"privacy":"Private","longitude":-122.144965,"zipcode":"98052","sentence":"8104
         146th Ct. NE, Redmond, WA, 98052","location_type":"Mailing","city":"Redmond","name":null,"state":"WA","latitude":47.676096,"id":898035,"street":"8104
         146th Ct. NE"},{"street2":"","privacy":"Private","longitude":null,"zipcode":"98104","sentence":"710
         2nd Ave, Seattle, WA - WASHINGTON, 98104","location_type":"Home","city":"Seattle","name":null,"state":"WA
@@ -107,9 +107,9 @@ http_interactions:
         Hagglund","member_type":"Child","family_role":"Daughter","id":919381,"profile_picture":"https://jasonh.onthecity.org/images/50x50_thumb_female.jpg"},{"last":"Hagglund","type":"OfflineUser","nickname":null,"external_chms_id":null,"birthdate":"2002-03-11","gender":"Male","first":"Bigger","name":"Bigger
         Hagglund","member_type":"Child","family_role":"Son","id":844762,"profile_picture":"https://jasonh.onthecity.org/images/50x50_thumb.jpg"},{"last":"Hagglund","type":"OfflineUser","nickname":null,"external_chms_id":null,"birthdate":"2006-03-11","gender":"Female","first":"Middle","name":"Middle
         Hagglund","member_type":"Child","family_role":"Daughter","id":844761,"profile_picture":"https://jasonh.onthecity.org/images/50x50_thumb_female.jpg"},{"last":"Hagglund","type":"OfflineUser","nickname":null,"external_chms_id":null,"birthdate":"2011-03-11","gender":"Male","first":"Roger","name":"Roger
-        Hagglund","member_type":"Child","family_role":"Son","id":844760,"profile_picture":"https://jasonh.onthecity.org/images/50x50_thumb.jpg"}],"id":158558},"primary_phone_type":"Mobile","title":null,"staff":true,"profile_picture":"https://dcascn3rg03ga.cloudfront.net/accounts/1389/image_attachments/746882/IMG_5037-sha1-c86e444840a999d117603f4ee979e9394fa29bc1_thumb.JPG?1347918737","has_spouse":false}'
+        Hagglund","member_type":"Child","family_role":"Son","id":844760,"profile_picture":"https://jasonh.onthecity.org/images/50x50_thumb.jpg"}],"id":158558},"primary_phone_type":"Mobile","title":null,"staff":true,"profile_picture":"https://dcascn3rg03ga.cloudfront.net/accounts/1389/image_attachments/746882/IMG_5037-sha1-c86e444840a999d117603f4ee979e9394fa29bc1_thumb.JPG?1347918737"}'
     http_version: 
-  recorded_at: Fri, 27 Sep 2013 06:46:15 GMT
+  recorded_at: Fri, 27 Sep 2013 07:07:27 GMT
 - request:
     method: get
     uri: https://api.onthecity.org/me/permissions
@@ -137,7 +137,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 27 Sep 2013 06:46:15 GMT
+      - Fri, 27 Sep 2013 07:07:27 GMT
       Status:
       - 200 OK
       X-City-Ratelimit-Limit-By-Account:
@@ -156,5 +156,5 @@ http_interactions:
       encoding: US-ASCII
       string: ! '{"can_list_in_plaza":true,"can_create_in_group_ids":{"topics":[87135,105740,87131,89733,105739,87132,87133,87134,80861,88339,78430,83000,80858,105409,80859,80860,82434],"events":[87135,105740,87131,89733,105739,87132,87133,87134,80861,88339,78430,83000,80858,105409,80859,80860,82434],"albums":[87135,105740,87131,89733,105739,87132,87133,87134,80861,88339,78430,83000,80858,105409,80859,80860,82434],"needs":[87135,105740,87131,89733,105739,87132,87133,87134,80861,88339,78430,83000,80858,105409,80859,80860,82434],"prayers":[87135,105740,87131,89733,105739,87132,87133,87134,80861,88339,78430,83000,80858,105409,80859,80860,82434]},"member":true,"admin":true,"staff":true}'
     http_version: 
-  recorded_at: Fri, 27 Sep 2013 06:46:16 GMT
+  recorded_at: Fri, 27 Sep 2013 07:07:27 GMT
 recorded_with: VCR 2.6.0
