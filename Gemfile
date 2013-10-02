@@ -9,10 +9,14 @@ group :development do
 end
 
 group :test do
+  gem 'active_support'
   gem 'coveralls', :require => false
+  gem 'i18n'
   gem 'json', :platforms => :ruby_18
   gem 'rspec', '>= 2.14'
   gem 'simplecov', :require => false
+  gem 'typhoeus'
+  gem 'vcr'
   gem 'webmock'
 end
 

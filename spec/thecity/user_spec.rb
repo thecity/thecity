@@ -1,4 +1,3 @@
-# coding: utf-8
 require 'helper'
 
 describe TheCity::User do
@@ -16,6 +15,7 @@ describe TheCity::User do
       expect(user.groups.first).to be_a TheCity::Group
       expect(user.groups.first.name).to eq("My Group")
     end
+
     it "is empty when not set" do
       user = TheCity::User.new(:id => 6753948)
       expect(user.groups).to be_empty
@@ -44,4 +44,12 @@ describe TheCity::User do
     end
   end
 
+  vcr_options_user_perms = {:cassette_name => 'user_permissions'}
+  describe "#permissions", :vcr => vcr_options_user_perms do
+    it "returns user permissions" do
+      client = fire_up_test_client
+      user = client.me
+      expect(user.permissions).to be_an TheCity::Permissions
+    end
+  end
 end
