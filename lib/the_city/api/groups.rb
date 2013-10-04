@@ -8,7 +8,7 @@ module TheCity
   
       # Returns all the groups that the current user has an active role in
       #
-      # @req_scope group_contont or user_groups
+      # @req_scope group_content or user_groups
       # @param options [Hash] A customizable set of options.
       # @option options [Boolean] :force_download Forces the request to hit the server and flush the cached response
       # @return [Array<TheCity::Group>]
