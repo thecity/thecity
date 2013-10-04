@@ -44,8 +44,8 @@ describe TheCity::User do
     end
   end
 
-  vcr_options_user_perms = {:cassette_name => 'user_permissions'}
-  describe "#permissions", :vcr => vcr_options_user_perms do
+  #vcr_options_user_perms = {:cassette_name => 'user_permissions'}
+  describe "#permissions" do
     it "returns user permissions" do
       client = fire_up_test_client
       user = client.me
