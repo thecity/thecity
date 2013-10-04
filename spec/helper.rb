@@ -11,16 +11,16 @@ SimpleCov.start
 require 'the_city'
 require 'rspec'
 require 'webmock/rspec'
-require 'vcr'
+#require 'vcr'
 require 'typhoeus'
 require 'active_support/core_ext'
 
-VCR.configure do |c|
-  c.cassette_library_dir = "spec/vcr_cassettes"
-  c.hook_into :webmock
-  c.default_cassette_options = {:re_record_interval => 7.days}
-  c.configure_rspec_metadata!
-end
+# VCR.configure do |c|
+#   c.cassette_library_dir = "spec/vcr_cassettes"
+#   c.hook_into :webmock
+#   c.default_cassette_options = {:re_record_interval => 7.days}
+#   c.configure_rspec_metadata!
+# end
 
 RSpec.configure do |config|
   config.expect_with :rspec do |c|
