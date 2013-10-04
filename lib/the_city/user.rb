@@ -11,7 +11,7 @@ module TheCity
     # @return [Array<TheCity::Group>]
     def groups
       memoize(:groups) do
-        if @attrs[:groups].any?
+        if @attrs[:groups] and @attrs[:groups].any?
           Array(@attrs[:groups]).map do |g|
             TheCity::Group.new(g)
           end
