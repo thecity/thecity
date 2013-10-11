@@ -25,7 +25,7 @@ module TheCity
     end
 
     def label_for(thecity_primitive)
-      terminology.send(thecity_primitive.downcase.to_sym)
+      terminology.send(thecity_primitive.downcase.to_sym) rescue nil
     end
 
   end

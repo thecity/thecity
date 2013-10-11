@@ -2,7 +2,7 @@ module TheCity
   class Version
     MAJOR = 0
     MINOR = 0
-    PATCH = 7
+    PATCH = 9
     PRE = nil
 
     class << self

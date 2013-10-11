@@ -17,5 +17,13 @@ module TheCity
   class Permissions < TheCity::Base
     attr_reader :can_list_in_plaza, :member, :staff, :admin, :can_create_in_group_ids, :admin_privileges
 
+    def is_account_admin?
+      admin_privileges.any? {|ap| ap[:title] == 'Account Admin'} rescue false
+    end
+
+    def is_user_admin?
+      admin_privileges.any? {|ap| ap[:title] == 'User Admin'} rescue false
+    end
+
   end
 end

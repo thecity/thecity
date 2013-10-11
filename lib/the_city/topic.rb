@@ -7,4 +7,8 @@ module TheCity
   class Topic < TheCity::Content
   end
 
+  def valid?
+  	return (title and body and group_id)
+  end
+
 end

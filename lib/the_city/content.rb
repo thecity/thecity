@@ -16,13 +16,12 @@ module TheCity
 
   class Content < TheCity::Base
     include TheCity::Time
-    attr_reader :id, :title, :body
+    attr_reader :id, :title, :body, :blurb, :group_id,
+                :leader_only, :priority, :member_only, :gender_only, :gender_only_gender, :featured, 
+                :short_url, :file_attachments, :plaza, :shareable, :address
     object_attr_reader :User, :user
     object_attr_reader :Group, :group
 
-    # def user
-    #   @user
-    # end
     alias author user
     
   end
