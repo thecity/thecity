@@ -11,3 +11,6 @@ log/*
 pkg/*
 .DS_Store
 .idea
+*.orig
+.ruby-gemset
+.ruby-version
