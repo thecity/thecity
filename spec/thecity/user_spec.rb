@@ -44,4 +44,12 @@ describe TheCity::User do
     end
   end
 
+  #TODO: Make this work without VCR
+  #describe "#permissions" do
+  #  it "returns user permissions" do
+  #    client = fire_up_test_client
+  #    user = client.me
+  #    expect(user.permissions).to be_an TheCity::Permissions
+  #  end
+  #end
 end
