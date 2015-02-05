@@ -1,5 +1,7 @@
 # The City Ruby Gem
 
+[![Join the chat at https://gitter.im/thecity/thecity](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/thecity/thecity?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [![Gem Version](https://badge.fury.io/rb/thecity.png)](http://badge.fury.io/rb/thecity)
 [![Dependency Status](https://gemnasium.com/thecity/thecity.png)](https://gemnasium.com/thecity/thecity)
 [![Build Status](https://travis-ci.org/thecity/thecity.png?branch=master)](https://travis-ci.org/thecity/thecity)
